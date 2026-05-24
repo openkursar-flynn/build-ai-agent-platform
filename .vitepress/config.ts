@@ -40,9 +40,9 @@ export default defineConfig({
     '一本拆解 30 万行真实 AI 数字员工平台的技术书。从 Agent 引擎、上下文工程,到数字人协议、AI 浏览器、生产级调度——打开引擎盖讲清楚。',
   lang: 'zh-CN',
 
-  // GitHub Pages 子路径(部署在 username.github.io/build-ai-agent-platform/)
-  // 未来绑独立域名时改回 '/'
-  base: '/build-ai-agent-platform/',
+  // 自定义域名 book.imwangfu.com,部署在根路径
+  // GitHub Pages 会通过 book/public/CNAME 文件识别自定义域名
+  base: '/',
 
   // 只构建 book/ 目录,manuscript/ 永不暴露
   srcDir: 'book',

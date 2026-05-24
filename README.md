@@ -2,7 +2,7 @@
 
 一本拆解 30 万行真实 AI Agent 平台代码的技术书。
 
-🌐 **在线阅读**:<https://openkursar-flynn.github.io/build-ai-agent-platform/>
+🌐 **在线阅读**:<https://book.imwangfu.com>
 💬 **反馈与讨论**:[Issues](../../issues) · [Discussions](../../discussions)
 
 ---
