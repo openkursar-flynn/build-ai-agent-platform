@@ -2,7 +2,7 @@
 
 一本拆解 30 万行真实 AI Agent 平台代码的技术书。
 
-🌐 **在线阅读**:[待部署后填入 URL]
+🌐 **在线阅读**:<https://openkursar-flynn.github.io/build-ai-agent-platform/>
 💬 **反馈与讨论**:[Issues](../../issues) · [Discussions](../../discussions)
 
 ---
@@ -72,14 +72,13 @@ npm run preview      # 预览构建产物
 
 ## 部署
 
-已配置 Vercel。流程:
+已配置 GitHub Pages + Actions 自动部署。
 
-1. 在 [Vercel](https://vercel.com) 用 GitHub 登录
-2. 导入本仓库
-3. 默认配置即可,点击 Deploy
-4. 完成后可绑定自定义域名
+每次推送 `main` 分支,会自动触发 `.github/workflows/deploy.yml`,构建并发布到 GitHub Pages,通常 1-2 分钟内上线。
 
-后续每次推送 main 分支,自动触发部署。
+无需任何手动配置。
+
+> 若未来需要迁移到 Vercel,仓库根目录保留了 `vercel.json` 作为预设配置。
 
 ---
 
