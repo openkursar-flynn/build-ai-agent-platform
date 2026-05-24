@@ -1,0 +1,41 @@
+name: 🤔 提问
+description: 对书中内容有疑问、想深入讨论
+title: "[问题] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提问之前,可以先去 [Discussions](../../discussions) 看看是否有人讨论过类似话题。
+        如果只是想自由聊聊,推荐发 Discussions 而不是 Issue。
+
+  - type: input
+    id: chapter
+    attributes:
+      label: 涉及章节
+      description: 你的问题是看哪一章引发的
+      placeholder: 例如:第 3 章 大脑 / 3.4 Compact 策略
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: 你的问题
+      description: 尽量具体,方便作者或其他读者回答
+      placeholder: |
+        例如:
+        - 书里提到 xxx 策略,但在 xxx 场景下应该怎么做?
+        - 这一段的逻辑我没看明白:xxx
+        - xxx 和 xxx 的区别是什么?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 你的背景 / 应用场景(可选)
+      description: 提供背景能帮作者给出更针对性的回答
+      placeholder: 我正在尝试做 xxx,遇到了 xxx 问题
+    validations:
+      required: false

@@ -1,0 +1,15 @@
+{
+  "name": "how-to-build-ai-agent-book",
+  "version": "1.0.0",
+  "description": "如何从零构建 7×24 小时 AI Agent",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.5.0"
+  }
+}

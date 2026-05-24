@@ -1,0 +1,40 @@
+name: 💡 建议
+description: 章节建议、内容补充、结构改进
+title: "[建议] "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎提建议!如果是较大的改进,作者会综合多个反馈一起处理。
+
+  - type: input
+    id: chapter
+    attributes:
+      label: 涉及章节(可选)
+      description: 如果是针对某一章的建议
+      placeholder: 例如:第 5 章 / 全书结构 / 无
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 你的建议
+      description: 描述你认为可以改进的地方
+      placeholder: |
+        例如:
+        - 第 3 章后建议加入 xxx 的内容,因为...
+        - 某个图示如果改成 xxx 会更清楚
+        - 章节顺序建议调整为 xxx
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: 为什么(可选)
+      description: 说说背后的考虑
+      placeholder: 这样可以让读者更容易理解...
+    validations:
+      required: false

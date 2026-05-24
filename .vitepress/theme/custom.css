@@ -1,0 +1,203 @@
+/**
+ * 阅读体验定制
+ * - 中文字体:霞鹜文楷(开源,书籍质感)
+ * - 西文字体:Inter
+ * - 等宽字体:JetBrains Mono
+ * - 排版优化:行距、字号、段间距适合长篇阅读
+ */
+
+/* 字体声明:霞鹜文楷(LXGW WenKai),通过 cdn.jsdelivr 加载 */
+/* 注:如需国内访问,可改为本地字体文件或 国内字体 CDN */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.css');
+
+:root {
+  /* 字体栈 */
+  --vp-font-family-base:
+    'Inter', 'LXGW WenKai Screen', -apple-system, BlinkMacSystemFont, 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --vp-font-family-mono:
+    'JetBrains Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* 主题色:深沉、克制、有作者人格 */
+  --vp-c-brand-1: #1a4d8f;
+  --vp-c-brand-2: #1e5ba0;
+  --vp-c-brand-3: #2563a8;
+  --vp-c-brand-soft: rgba(26, 77, 143, 0.14);
+
+  /* 阅读相关 */
+  --vp-layout-max-width: 1440px;
+}
+
+.dark {
+  --vp-c-brand-1: #6ba3e8;
+  --vp-c-brand-2: #4d92e0;
+  --vp-c-brand-3: #2e7fd8;
+  --vp-c-brand-soft: rgba(107, 163, 232, 0.16);
+}
+
+/* === 正文排版优化 === */
+.vp-doc {
+  font-size: 16.5px;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+}
+
+.vp-doc p {
+  margin: 1.1em 0;
+}
+
+.vp-doc h1 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+}
+
+.vp-doc h2 {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  font-weight: 650;
+  letter-spacing: -0.005em;
+}
+
+.vp-doc h3 {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.vp-doc h2 + h3 {
+  margin-top: 1.5rem;
+}
+
+/* 中文标点优化 */
+.vp-doc {
+  text-justify: inter-character;
+}
+
+/* === 引用块 === */
+.vp-doc blockquote {
+  font-style: normal;
+  border-left-width: 3px;
+  background-color: var(--vp-c-bg-soft);
+  border-radius: 0 6px 6px 0;
+  padding: 0.6em 1.2em;
+}
+
+.vp-doc blockquote > p {
+  color: var(--vp-c-text-2);
+  margin: 0.5em 0;
+}
+
+/* === 代码 === */
+.vp-doc :not(pre) > code {
+  font-size: 0.88em;
+  padding: 0.15em 0.4em;
+  background-color: var(--vp-c-bg-soft);
+  border-radius: 4px;
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
+}
+
+.vp-doc div[class*='language-'] {
+  border-radius: 8px;
+  margin: 1.5em 0;
+}
+
+.vp-doc div[class*='language-'] pre {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* === 表格 === */
+.vp-doc table {
+  display: table;
+  width: 100%;
+  margin: 1.5em 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.vp-doc th {
+  background-color: var(--vp-c-bg-soft);
+  font-weight: 600;
+}
+
+.vp-doc td,
+.vp-doc th {
+  padding: 0.7em 1em;
+}
+
+/* === 链接 === */
+.vp-doc a {
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid var(--vp-c-brand-soft);
+  transition: border-color 0.2s;
+}
+
+.vp-doc a:hover {
+  border-bottom-color: var(--vp-c-brand-1);
+}
+
+/* === 列表 === */
+.vp-doc ul,
+.vp-doc ol {
+  padding-left: 1.5em;
+}
+
+.vp-doc li {
+  margin: 0.3em 0;
+}
+
+.vp-doc li > p {
+  margin: 0.4em 0;
+}
+
+/* === 阅读进度条(顶部细线) === */
+.VPNav {
+  position: relative;
+}
+
+.VPNav::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  width: var(--reading-progress, 0%);
+  background: linear-gradient(90deg, var(--vp-c-brand-2), var(--vp-c-brand-1));
+  transition: width 0.1s linear;
+  z-index: 100;
+}
+
+/* === 首页定制 === */
+.VPHero .name,
+.VPHero .text {
+  font-weight: 700;
+}
+
+.VPHero .tagline {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* === 移动端优化 === */
+@media (max-width: 768px) {
+  .vp-doc {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .vp-doc h1 {
+    font-size: 1.8rem;
+  }
+
+  .vp-doc h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* === 选中文本配色 === */
+::selection {
+  background-color: var(--vp-c-brand-soft);
+}

@@ -1,0 +1,45 @@
+name: 📝 勘误
+description: 报告书中的错别字、技术错误、表述不清
+title: "[勘误] "
+labels: ["erratum"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢报告勘误!请尽量提供具体定位,方便快速修正。
+
+  - type: input
+    id: chapter
+    attributes:
+      label: 章节
+      description: 例如:第 3 章 / 3.2 节 / 前言
+      placeholder: 第 X 章 X.X 节
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: 具体位置(可选)
+      description: 一段原文摘录,或描述一下位置
+      placeholder: "原文:xxx"
+    validations:
+      required: false
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题描述
+      description: 错误是什么?
+      placeholder: 这里写的是 xxx,但实际应该是 xxx
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 建议修改(可选)
+      description: 如果你有具体的修改建议,可以写在这里
+      placeholder: 建议改为 xxx
+    validations:
+      required: false
