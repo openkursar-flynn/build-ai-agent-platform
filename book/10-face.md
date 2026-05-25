@@ -7,10 +7,6 @@
 新章节合并到 main 分支后,通常 2 分钟内自动部署。
 :::
 
-## 本章会讲什么
-
-StreamingBubble 防闪烁、Canvas AI Awareness、流式 Markdown 渲染。讨论 React + 流式响应这条路上的桌面级性能调优。
-
 ---
 
 ← [返回首页查看完整目录](/)
