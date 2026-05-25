@@ -124,10 +124,10 @@ export default defineConfig({
     // 自动生成的侧边栏
     sidebar: generateSidebar(),
 
-    // 大纲深度(右侧目录)
+    // 大纲深度(右侧小节导航)
     outline: {
       level: [2, 3],
-      label: '本章目录',
+      label: '本章小节',
     },
 
     // 文档页页脚
