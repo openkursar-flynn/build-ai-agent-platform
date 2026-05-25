@@ -64,6 +64,11 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#1a1a1a' }],
     ['meta', { name: 'author', content: 'Flynn' }],
+    // Google Analytics (GA4)
+    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-TWXMJ6R199' }],
+    ['script', {}, `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-TWXMJ6R199');`],
+    // 百度统计
+    ['script', {}, `var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?088b745d5fe1e425c919ebcf4f27bc46";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();`],
     ['meta', { property: 'og:type', content: 'book' }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
     [
