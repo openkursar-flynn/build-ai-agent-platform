@@ -120,3 +120,11 @@ npm run preview      # 预览构建产物
 - **代码部分**(`.vitepress/` 配置、主题、构建脚本):MIT
 
 完整许可见 [LICENSE](LICENSE)。
+
+## 参考源码
+
+本书拆解的项目 Halo 已完整开源:
+
+<https://github.com/openkursar/hello-halo>
+
+书中所有源码引用、架构讨论、设计决策均可在该仓库中验证。
