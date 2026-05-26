@@ -93,7 +93,7 @@ export default defineConfig({
       },
     ],
     ['meta', { property: 'og:site_name', content: '如何从零构建 7×24 小时 AI Agent' }],
-    ['meta', { property: 'og:image', content: 'https://book.imwangfu.com/favicon.svg' }],
+    ['meta', { property: 'og:image', content: 'https://book.imwangfu.com/book-cover.png' }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
     ['meta', { name: 'twitter:title', content: '如何从零构建 7×24 小时 AI Agent' }],
     ['meta', { name: 'keywords', content: 'AI Agent,Agent Loop,上下文工程,AI 浏览器,Electron,Halo,数字员工,AI 编程,Agent 架构,LLM 工具调用,openclaw,Claude Code' }],
