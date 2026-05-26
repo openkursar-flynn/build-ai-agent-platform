@@ -69,6 +69,7 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#1a1a1a' }],
     ['meta', { name: 'author', content: 'Flynn' }],
+    ['meta', { name: 'baidu-site-verification', content: 'codeva-JgwHWgNN6E' }],
     // Google Analytics (GA4)
     ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-TWXMJ6R199' }],
     ['script', {}, `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-TWXMJ6R199');`],
