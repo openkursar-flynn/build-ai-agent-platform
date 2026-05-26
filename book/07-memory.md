@@ -1,3 +1,11 @@
+---
+description: 'AI Agent 记忆系统设计:长程记忆与短程记忆边界、写入时机、压缩策略。为什么向量检索不够,需要多层记忆架构。'
+head:
+  - - meta
+    - property: og:description
+      content: 'AI 记忆系统、Agent 长期记忆、记忆压缩策略'
+---
+
 # ⏳ 第七章:记忆 — 让数字员工越来越聪明
 
 ::: warning 本章即将发布

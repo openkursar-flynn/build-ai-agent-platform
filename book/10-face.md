@@ -1,3 +1,11 @@
+---
+description: 'AI 前端交互工程:StreamingBubble 防闪烁、Canvas AI Awareness、流式 Markdown 渲染。React + 流式响应的桌面级性能优化。'
+head:
+  - - meta
+    - property: og:description
+      content: '流式渲染、StreamingBubble、前端性能优化'
+---
+
 # ⏳ 第十章:面孔 — 前端交互工程
 
 ::: warning 本章即将发布

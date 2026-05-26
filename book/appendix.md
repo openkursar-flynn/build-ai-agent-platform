@@ -1,3 +1,11 @@
+---
+description: '全书核心术语速查、Halo 源码导航地图、推荐阅读路径。AI Agent 系统设计关键概念索引。'
+head:
+  - - meta
+    - property: og:description
+      content: '术语表、源码导览、阅读路径'
+---
+
 # ⏳ 附录:关键术语 / 源码导览
 
 ::: warning 本章即将发布

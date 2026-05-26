@@ -1,3 +1,11 @@
+---
+description: '从单循环 Agent Loop 到上下文工程三层模型(L1/L2/L3),本书作者讲述 Halo AI Agent 平台从内部原型到开源产品的完整历程,以及这本书要解决什么问题。'
+head:
+  - - meta
+    - property: og:description
+      content: '从单循环 Agent Loop 到上下文工程三层模型,Halo AI Agent 平台从原型到开源的完整历程。'
+---
+
 # 前言
 
 那天我在医院打针。

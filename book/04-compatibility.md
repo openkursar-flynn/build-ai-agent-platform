@@ -1,3 +1,11 @@
+---
+description: 'AI 多模型兼容层设计:Anthropic/OpenAI/DeepSeek/Gemini 协议差异归一化,工具调用格式统一,流式响应适配。让 Agent 引擎支持任意 LLM 供应商。'
+head:
+  - - meta
+    - property: og:description
+      content: '多模型兼容、LLM 协议归一化、工具调用适配'
+---
+
 # ⏳ 第四章:兼容层 — 让大脑听懂所有语言
 
 ::: warning 本章即将发布

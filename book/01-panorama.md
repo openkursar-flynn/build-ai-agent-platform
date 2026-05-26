@@ -1,3 +1,11 @@
+---
+description: 'AI 数字员工的完整架构全景:从 Agent Loop 到 Skill 体系,从 AI 浏览器(Accessibility Tree)到五层系统架构,理解一个 7×24 运行的 AI Agent 平台如何设计。'
+head:
+  - - meta
+    - property: og:description
+      content: 'AI 数字员工完整架构全景:Agent Loop、Skill 体系、AI 浏览器、五层系统架构。'
+---
+
 # 第一章：全景 — AI 数字员工是什么
 
 ---

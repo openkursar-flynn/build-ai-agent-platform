@@ -1,3 +1,11 @@
+---
+description: 'Agent Loop 工程化设计:一轮 query 的完整生命周期、Compact 上下文压缩策略、Persistent REPL、Cache Breakpoints。深入 AI 引擎内核的架构决策与取舍。'
+head:
+  - - meta
+    - property: og:description
+      content: 'Agent Loop 设计、上下文压缩策略 Compact、AI 引擎工程化'
+---
+
 # ⏳ 第三章:大脑 — AI 引擎的工程化
 
 ::: warning 本章即将发布

@@ -1,3 +1,11 @@
+---
+description: 'AI Agent App Store 与生态设计:为什么用 App Spec 而不是插件、安装机制、社区生态启动策略。'
+head:
+  - - meta
+    - property: og:description
+      content: 'Agent App Store、插件生态、能力市场'
+---
+
 # ⏳ 第十二章:市场 — App Store 与生态
 
 ::: warning 本章即将发布

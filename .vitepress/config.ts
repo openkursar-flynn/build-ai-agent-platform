@@ -37,7 +37,7 @@ export default defineConfig({
   title: '如何从零构建 7×24 小时 AI Agent',
   titleTemplate: ':title | 如何从零构建 7×24 小时 AI Agent',
   description:
-    '一本拆解 30 万行真实 AI 数字员工平台的技术书。从 Agent 引擎、上下文工程,到数字人协议、AI 浏览器、生产级调度——打开引擎盖讲清楚。',
+    '一本讲 AI Agent 系统设计思想的技术书。从问题出发,教设计原则,用 30 万行真实代码做案例。覆盖 Agent Loop、上下文工程、AI 浏览器自动化、Electron 性能优化。',
   lang: 'zh-CN',
 
   // 自定义域名 book.imwangfu.com,部署在根路径
@@ -52,6 +52,11 @@ export default defineConfig({
 
   // 干净的 URL(无 .html 后缀)
   cleanUrls: true,
+
+  // SEO: 自动生成 sitemap.xml
+  sitemap: {
+    hostname: 'https://book.imwangfu.com',
+  },
 
   // 暗色模式默认跟随系统
   appearance: true,
@@ -83,9 +88,14 @@ export default defineConfig({
       {
         property: 'og:description',
         content:
-          '拆解 30 万行真实 AI 数字员工平台,打开引擎盖讲架构、Agent 引擎、上下文工程与生产级实践。',
+          '一本讲 AI Agent 系统设计思想的技术书。从问题出发,教设计原则,用 30 万行真实代码做案例。',
       },
     ],
+    ['meta', { property: 'og:site_name', content: '如何从零构建 7×24 小时 AI Agent' }],
+    ['meta', { property: 'og:image', content: 'https://book.imwangfu.com/favicon.svg' }],
+    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['meta', { name: 'twitter:title', content: '如何从零构建 7×24 小时 AI Agent' }],
+    ['meta', { name: 'keywords', content: 'AI Agent,Agent Loop,上下文工程,AI 浏览器,Electron,Halo,数字员工,AI 编程,Agent 架构,LLM 工具调用,openclaw,Claude Code' }],
   ],
 
   // 主题配置
