@@ -61,6 +61,12 @@
 
 ---
 
+## 作者
+
+Flynn,全栈工程师,前腾讯文档高级工程师,2024 年率先落地国产通用 Agent,持有多项 AI 专利,[Halo](https://github.com/openkursar/hello-halo) 项目作者。
+
+---
+
 ## 提交反馈
 
 | 类型 | 入口 |
