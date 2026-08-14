@@ -19,7 +19,7 @@
 
 ## 作者
 
-Flynn,全栈工程师,前腾讯文档高级工程师,2024 年率先落地国产通用 Agent,持有多项 AI 专利,Halo 项目作者。
+Flynn，人工智能 & 前端 & 后台，前腾讯文档核心工程师，擅长大型软件架构（文档/IDE/AI桌面）； 2024 年率先在金融领域试点产通用 Agent——全流程自动化编码和研发，持有多项 AI 专利（Agent Loop，压缩，记忆等）； 首个可视化 & 远程 AI Agent 桌面（2025 年10月）——[Halo AI 工作站](https://hello-halo.cc/docs/guide/what-is-halo)  项目作者。
 
 ## 协议
 
