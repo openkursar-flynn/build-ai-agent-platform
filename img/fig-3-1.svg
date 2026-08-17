@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" width="1000" height="470" role="img" aria-labelledby="fig31title">
+  <title id="fig31title">图 3-1　编排没有被删除，而是从架构图搬进了工具清单</title>
+  <style>
+    svg {
+      --fg: #1f2328;
+      --muted: #6b7280;
+      --line: #c8d1da;
+      --accent: #b45309;
+      --panel: #f7f9fb;
+      --box: #ffffff;
+    }
+    text {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+                   "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+    }
+    .h    { fill: var(--fg); font-size: 17px; font-weight: 600; }
+    .sub  { fill: var(--muted); font-size: 14px; }
+    .box  { fill: var(--fg); font-size: 13.5px; }
+    .cap  { fill: var(--fg); font-size: 13.5px; }
+    .cap2 { fill: var(--muted); font-size: 13px; }
+    .tag  { fill: var(--muted); font-size: 12px; }
+    .acc  { fill: var(--accent); font-size: 12.5px; }
+    .accb { fill: var(--accent); font-size: 12px; font-weight: 600; }
+    .r-panel { fill: var(--panel); stroke: var(--line); stroke-width: 1.2; }
+    .r-box   { fill: var(--box);   stroke: var(--line); stroke-width: 1.2; }
+    .r-dash  { fill: var(--panel); stroke: var(--accent); stroke-width: 1.2; stroke-dasharray: 6 4; opacity: .95; }
+    .ln   { stroke: var(--line); stroke-width: 1.4; fill: none; }
+    .ln-a { stroke: var(--accent); stroke-width: 1.4; fill: none; }
+    .div  { stroke: var(--line); stroke-width: 1; stroke-dasharray: 3 7; opacity: .8; }
+    .f-line { fill: var(--line); }
+    .f-acc  { fill: var(--accent); }
+  </style>
+
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" class="f-line"/>
+    </marker>
+    <marker id="ah-a" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" class="f-acc"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 左：2023–2024 ============ -->
+  <text class="h"   x="225" y="46" text-anchor="middle">2023–2024</text>
+  <text class="sub" x="225" y="72" text-anchor="middle">编排是设计时画好的图</text>
+
+  <rect class="r-box" x="165" y="105" width="120" height="44" rx="8"/>
+  <text class="box" x="225" y="133" text-anchor="middle">规划者</text>
+
+  <path class="ln" d="M225,149 L225,187" marker-end="url(#ah)"/>
+
+  <rect class="r-box" x="165" y="195" width="120" height="44" rx="8"/>
+  <text class="box" x="225" y="223" text-anchor="middle">执行者</text>
+
+  <path class="ln" d="M225,239 L225,277" marker-end="url(#ah)"/>
+
+  <rect class="r-box" x="165" y="285" width="120" height="44" rx="8"/>
+  <text class="box" x="225" y="313" text-anchor="middle">校验者</text>
+
+  <path class="ln" d="M285,307 L335,307 L335,217 L293,217" marker-end="url(#ah)"/>
+  <text class="tag" x="343" y="266">不通过</text>
+
+  <text class="cap"  x="225" y="400" text-anchor="middle">决策点在边上</text>
+  <text class="cap2" x="225" y="426" text-anchor="middle">谁调用谁：设计时接好</text>
+
+  <!-- ============ 分隔 ============ -->
+  <line class="div" x1="445" y1="30" x2="445" y2="440"/>
+
+  <!-- ============ 右：2025 起 ============ -->
+  <text class="h"   x="735" y="46" text-anchor="middle">2025 起</text>
+  <text class="sub" x="735" y="72" text-anchor="middle">编排是循环里的一个动作</text>
+
+  <!-- 主循环 -->
+  <rect class="r-panel" x="565" y="90" width="340" height="110" rx="12"/>
+  <text class="tag" x="580" y="110">主循环</text>
+
+  <rect class="r-box" x="588" y="122" width="106" height="42" rx="6"/>
+  <text class="box" x="641" y="149" text-anchor="middle">模型决策</text>
+
+  <rect class="r-box" x="776" y="122" width="106" height="42" rx="6"/>
+  <text class="box" x="829" y="149" text-anchor="middle">执行工具</text>
+
+  <path class="ln" d="M694,143 L768,143" marker-end="url(#ah)"/>
+  <path class="ln" d="M829,164 L829,182 L641,182 L641,172" marker-end="url(#ah)"/>
+
+  <!-- 派发 -->
+  <path class="ln-a" d="M735,200 L735,252" marker-end="url(#ah-a)"/>
+  <text class="acc" x="748" y="232">其中一个工具：开一个新的循环</text>
+
+  <!-- 子 Agent -->
+  <rect class="r-dash" x="590" y="258" width="290" height="94" rx="12"/>
+  <text class="accb" x="604" y="279">子 Agent</text>
+
+  <rect class="r-box" x="612" y="286" width="94" height="38" rx="6"/>
+  <text class="box" x="659" y="311" text-anchor="middle">模型决策</text>
+
+  <rect class="r-box" x="766" y="286" width="94" height="38" rx="6"/>
+  <text class="box" x="813" y="311" text-anchor="middle">执行工具</text>
+
+  <path class="ln" d="M706,305 L758,305" marker-end="url(#ah)"/>
+  <path class="ln" d="M813,324 L813,338 L659,338 L659,332" marker-end="url(#ah)"/>
+
+  <text class="tag" x="735" y="372" text-anchor="middle">同一个循环的又一个实例</text>
+
+  <text class="cap"  x="735" y="400" text-anchor="middle">决策点在圈里</text>
+  <text class="cap2" x="735" y="426" text-anchor="middle">谁调用谁：运行时模型决定</text>
+</svg>

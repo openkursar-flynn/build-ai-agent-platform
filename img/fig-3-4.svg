@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">图 3-4 最小 Agent：输入、决策、工具，循环</title>
+  <desc id="desc">从左到右：输入（系统提示词加任务）进入 Agent 决策，决策读取累计的历史消息决定下一步，需要时发起工具调用；工具结果写回历史，回环箭头绕回决策，进入下一轮；不再调用工具时输出答案，循环结束。</desc>
+  <style>
+    svg { --fg:#20242b; --muted:#667085; --line:#a8b2c0; --accent:#b45309; --accent-bg:#fff7ed; --panel:#f7f9fb; }
+    text { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif; }
+    .title { fill:var(--fg); font-size:18px; font-weight:600; }
+    .head { fill:var(--fg); font-size:17px; font-weight:600; }
+    .small { fill:var(--muted); font-size:13px; }
+    .body { fill:var(--fg); font-size:13px; }
+    .accent { fill:var(--accent); font-size:13px; font-weight:600; }
+    .box { fill:var(--panel); stroke:var(--line); stroke-width:1.4; }
+    .focus { fill:var(--accent-bg); stroke:var(--accent); stroke-width:1.8; }
+    .flow { stroke:var(--line); stroke-width:1.8; fill:none; }
+    .loop { stroke:var(--accent); stroke-width:2.4; fill:none; }
+  </style>
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#a8b2c0"/></marker>
+    <marker id="ao" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#b45309"/></marker>
+  </defs>
+
+  <text class="title" x="480" y="28" text-anchor="middle">最小 Agent：输入、决策、工具，循环</text>
+
+  <!-- 输入 -->
+  <rect class="box" x="80" y="120" width="200" height="110" rx="12"/>
+  <text class="head" x="180" y="152" text-anchor="middle">输入</text>
+  <text class="body" x="180" y="180" text-anchor="middle">提示词（system prompt）</text>
+  <text class="body" x="180" y="204" text-anchor="middle">任务（task input）</text>
+
+  <!-- Agent 决策 -->
+  <rect class="focus" x="380" y="110" width="220" height="130" rx="12"/>
+  <text class="head" x="490" y="144" text-anchor="middle">Agent 决策</text>
+  <text class="body" x="490" y="172" text-anchor="middle">历史累计（messages）</text>
+  <text class="accent" x="490" y="200" text-anchor="middle">读完，决定下一步</text>
+
+  <!-- 工具调用 -->
+  <rect class="box" x="700" y="120" width="180" height="110" rx="12"/>
+  <text class="head" x="790" y="152" text-anchor="middle">工具调用</text>
+  <text class="small" x="790" y="180" text-anchor="middle">文件 · 终端 · 网络</text>
+  <text class="small" x="790" y="204" text-anchor="middle">读写外部世界</text>
+
+  <!-- 主流程箭头 -->
+  <path class="flow" d="M280 175 H374" marker-end="url(#ag)"/>
+  <path class="flow" d="M600 175 H694" marker-end="url(#ag)"/>
+  <text class="small" x="327" y="163" text-anchor="middle">进入</text>
+  <text class="small" x="647" y="163" text-anchor="middle">调用</text>
+
+  <!-- 回环：工具结果写回历史，绕回决策 -->
+  <path class="loop" d="M790 230 V320 H490 V246" marker-end="url(#ao)"/>
+  <text class="accent" x="640" y="345" text-anchor="middle">工具结果写回历史 · 进入下一轮</text>
+
+  <!-- 出口：不再调用工具 -->
+  <path class="flow" d="M490 110 V68 H746" marker-end="url(#ag)"/>
+  <text class="small" x="615" y="60" text-anchor="middle">不再调用工具</text>
+  <rect class="focus" x="752" y="48" width="116" height="40" rx="20"/>
+  <text class="head" x="810" y="74" text-anchor="middle">输出答案</text>
+</svg>
