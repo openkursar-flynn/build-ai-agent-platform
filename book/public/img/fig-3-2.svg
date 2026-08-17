@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width="1000" height="380" role="img" aria-labelledby="fig32title">
+  <title id="fig32title">图 3-2　工程量没有减少，只是从结构搬到了输入</title>
+  <style>
+    svg {
+      --fg: #1f2328;
+      --muted: #6b7280;
+      --line: #c8d1da;
+      --accent: #b45309;
+      --panel: #f7f9fb;
+    }
+    text {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+                   "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+    }
+    .h     { fill: var(--fg); font-size: 17px; font-weight: 600; }
+    .pt    { fill: var(--fg); font-size: 16px; font-weight: 600; }
+    .ps    { fill: var(--muted); font-size: 13.5px; }
+    .item  { fill: var(--fg); font-size: 13.5px; }
+    .concl { fill: var(--accent); font-size: 13.5px; font-weight: 600; }
+    .tag   { fill: var(--muted); font-size: 12px; }
+    .r-panel { fill: var(--panel); stroke: var(--line); stroke-width: 1.2; }
+    .hr    { stroke: var(--line); stroke-width: 1; }
+    .f-acc { fill: var(--accent); }
+  </style>
+
+  <text class="h" x="500" y="42" text-anchor="middle">工程没有消失，只是换了落点</text>
+
+  <!-- ============ 左块 ============ -->
+  <rect class="r-panel" x="60" y="78" width="360" height="260" rx="12"/>
+  <text class="pt" x="84" y="114">多组件架构</text>
+  <text class="ps" x="84" y="142">工程在「结构」上</text>
+  <line class="hr" x1="76" y1="162" x2="404" y2="162"/>
+
+  <text class="item" x="84" y="198">· 组件怎么切分</text>
+  <text class="item" x="84" y="226">· 边的条件怎么写</text>
+  <text class="item" x="84" y="254">· 状态存在哪里</text>
+  <text class="item" x="84" y="282">· 谁校验谁、失败怎么回退</text>
+
+  <line class="hr" x1="76" y1="302" x2="404" y2="302"/>
+  <text class="concl" x="84" y="326">改变行为 = 改图</text>
+
+  <!-- ============ 搬运箭头 ============ -->
+  <polygon class="f-acc" points="440,188 520,188 520,172 562,200 520,228 520,212 440,212"/>
+  <text class="tag" x="501" y="254" text-anchor="middle">同一批工程量</text>
+
+  <!-- ============ 右块 ============ -->
+  <rect class="r-panel" x="580" y="78" width="360" height="260" rx="12"/>
+  <text class="pt" x="604" y="114">循环架构</text>
+  <text class="ps" x="604" y="142">工程在「输入」上</text>
+  <line class="hr" x1="596" y1="162" x2="924" y2="162"/>
+
+  <text class="item" x="604" y="198">· 历史留什么、压什么</text>
+  <text class="item" x="604" y="226">· 工具返回值怎么组织</text>
+  <text class="item" x="604" y="254">· 何时塞一条提醒</text>
+  <text class="item" x="604" y="282">· 缓存断点放在哪</text>
+
+  <line class="hr" x1="596" y1="302" x2="924" y2="302"/>
+  <text class="concl" x="604" y="326">改变行为 = 改每一轮的输入</text>
+</svg>

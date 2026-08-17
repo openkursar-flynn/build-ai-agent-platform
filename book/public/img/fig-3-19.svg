@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" width="1000" height="430" role="img" aria-labelledby="title desc">
+  <title id="title">图 3-19 缓存复用的是前缀，中间一改后面全废</title>
+  <desc id="desc">上下两条横向 token 序列。上面一条：前面一长段系统提示词与工具定义为深色，已缓存可复用；后面一小段对话与状态回注为浅色，每轮重新计算。下面一条：中间某个 token 变红，其后所有 token 变灰，从改动处起全部失效；红点之前仍为深色，前缀不变仍可复用。</desc>
+  <style>
+    svg { --fg:#20242b; --muted:#667085; --line:#a8b2c0; --accent:#b45309; --accent-bg:#fff7ed; --red:#dc2626; --cached:#404b5c; --fresh:#dde5ee; --dead:#e9edf3; }
+    text { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif; }
+    .title { fill:var(--fg); font-size:18px; font-weight:600; }
+    .head { fill:var(--fg); font-size:15px; font-weight:600; }
+    .small { fill:var(--muted); font-size:13px; }
+    .accent { fill:var(--accent); font-size:13px; font-weight:600; }
+    .red { fill:var(--red); font-size:13px; font-weight:600; }
+    .cached { fill:var(--cached); }
+    .fresh { fill:var(--fresh); stroke:#c4cedb; stroke-width:1; }
+    .dead { fill:var(--dead); stroke:#d4dbe4; stroke-width:1; }
+    .bp { stroke:var(--accent); stroke-width:1.6; stroke-dasharray:5 4; }
+    .tick { stroke:var(--red); stroke-width:1.6; }
+    .brace { stroke:var(--line); stroke-width:1.4; fill:none; stroke-linecap:round; }
+  </style>
+
+  <text class="title" x="500" y="34" text-anchor="middle">缓存复用的是前缀；中间一改，后面全废</text>
+
+  <!-- ======== 上一条：前缀未变 ======== -->
+  <text class="head" x="90" y="88">改动之前</text>
+  <text class="small" x="180" y="88">断点以前一字不差，K/V 直接复用</text>
+
+  <path class="cached" d="M90 120h20v30h-20z M116 120h20v30h-20z M142 120h20v30h-20z M168 120h20v30h-20z M194 120h20v30h-20z M220 120h20v30h-20z M246 120h20v30h-20z M272 120h20v30h-20z M298 120h20v30h-20z M324 120h20v30h-20z M350 120h20v30h-20z M376 120h20v30h-20z M402 120h20v30h-20z M428 120h20v30h-20z M454 120h20v30h-20z M480 120h20v30h-20z M506 120h20v30h-20z M532 120h20v30h-20z M558 120h20v30h-20z M584 120h20v30h-20z M610 120h20v30h-20z M636 120h20v30h-20z"/>
+  <path class="fresh" d="M662 120h20v30h-20z M688 120h20v30h-20z M714 120h20v30h-20z M740 120h20v30h-20z M766 120h20v30h-20z M792 120h20v30h-20z M818 120h20v30h-20z M844 120h20v30h-20z M870 120h20v30h-20z M896 120h20v30h-20z"/>
+
+  <line class="bp" x1="659" y1="106" x2="659" y2="164"/>
+  <text class="accent" x="659" y="98" text-anchor="middle">断点</text>
+
+  <text class="small" x="373" y="172" text-anchor="middle">系统提示词 + 工具定义</text>
+  <path class="brace" d="M90 182v8h566v-8"/>
+  <text class="accent" x="373" y="210" text-anchor="middle">已缓存 · 直接复用</text>
+
+  <text class="small" x="789" y="172" text-anchor="middle">对话 + 状态回注</text>
+  <text class="small" x="789" y="210" text-anchor="middle">每轮重新计算</text>
+
+  <!-- ======== 下一条：中间改了一个 token ======== -->
+  <text class="head" x="90" y="258">中间改一个字</text>
+  <text class="small" x="212" y="258">同一个 token 的 K/V 变了，它后面全部作废</text>
+
+  <path class="cached" d="M90 290h20v30h-20z M116 290h20v30h-20z M142 290h20v30h-20z M168 290h20v30h-20z M194 290h20v30h-20z M220 290h20v30h-20z M246 290h20v30h-20z M272 290h20v30h-20z M298 290h20v30h-20z M324 290h20v30h-20z M350 290h20v30h-20z"/>
+  <rect x="376" y="290" width="20" height="30" fill="var(--red)"/>
+  <path class="dead" d="M402 290h20v30h-20z M428 290h20v30h-20z M454 290h20v30h-20z M480 290h20v30h-20z M506 290h20v30h-20z M532 290h20v30h-20z M558 290h20v30h-20z M584 290h20v30h-20z M610 290h20v30h-20z M636 290h20v30h-20z M662 290h20v30h-20z M688 290h20v30h-20z M714 290h20v30h-20z M740 290h20v30h-20z M766 290h20v30h-20z M792 290h20v30h-20z M818 290h20v30h-20z M844 290h20v30h-20z M870 290h20v30h-20z M896 290h20v30h-20z"/>
+
+  <line class="tick" x1="386" y1="276" x2="386" y2="334"/>
+  <text class="red" x="386" y="356" text-anchor="middle">改动处</text>
+
+  <path class="brace" d="M90 342v8h280v-8"/>
+  <text class="accent" x="230" y="372" text-anchor="middle">前缀不变 · 仍可复用</text>
+
+  <path class="brace" d="M402 342v8h514v-8" stroke="#d4dbe4"/>
+  <text class="red" x="659" y="372" text-anchor="middle">从改动处起，K/V 全部重算</text>
+
+  <text class="small" x="500" y="412" text-anchor="middle">每个 token 的 K/V 只由它前面的内容决定——所以能复用的，只有从开头起一字不差的那一段</text>
+</svg>
